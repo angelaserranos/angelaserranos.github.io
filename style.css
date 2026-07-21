@@ -183,3 +183,58 @@ h1 {
 .about-imagen-container:hover .linkedin-badge {
     background: rgba(13, 18, 37, 0.95); /* Se oscurece ligeramente al hacer hover */
 }
+
+/* --- SECCIÓN SKILLS --- */
+.skills-container-general {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-container-general h2 {
+    margin-bottom: 5px;
+}
+
+.skills-descripcion {
+    color: #666;
+    margin-bottom: 40px !important;
+}
+
+/* Cuadrícula adaptable para las tarjetas de habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+/* Tarjeta individual para cada categoría */
+.skill-card {
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    color: #1e3c72;
+    font-weight: 600;
+}
+
+.skill-card p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.5;
+    max-width: none; /* Asegura que el texto use todo el ancho de la tarjeta */
+}
