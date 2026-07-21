@@ -9,16 +9,17 @@ body, html {
 
 /* MENUS */
 .menu-superior {
-    position: fixed; /* Para que se vea al bajar */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
     padding: 20px 40px;
     display: flex;
-    justify-content: flex-end; /* Mantiene los enlaces a la derecha */
-    z-index: 1000; /* Asegura que el menú pase siempre por encima del resto de la web */
-    transition: background-color 0.3s ease; /* Hace que el color de fondo cambie suavemente */
+    justify-content: flex-end;
+    z-index: 1000;
+    background-color: #0d1225; /* ¡Aquí está tu color fijo desde el principio! */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Le dejamos la sombra para que se separe del fondo */
 }
 
 /* Esta clase se añadirá automáticamente con JavaScript al empezar a bajar */
