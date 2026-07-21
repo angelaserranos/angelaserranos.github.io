@@ -101,67 +101,85 @@ h1 {
     line-height: 1.6;
 }
 
-/* --- SECCIÓN ABOUT (Diseño de dos columnas) --- */
+/* --- SECCIÓN ABOUT --- */
 .about-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px; /* Amplio espacio horizontal */
+    max-width: 1000px;
     margin: 0 auto;
-    gap: 50px; /* Separación elegante entre texto y foto */
-    text-align: left; /* Alineado a la izquierda para un look profesional tipo portfolio */
+    gap: 50px;
+    text-align: left;
 }
 
 .about-texto {
-    flex: 1; /* Hace que el texto ocupe todo el espacio sobrante a lo ancho */
+    flex: 1;
 }
 
 .about-texto h2 {
     text-align: left;
     margin-top: 0;
+    margin-bottom: 5px;
 }
 
-/* Contenedor de la foto 3:4 */
+/* Subtítulo grande para el rol */
+.about-subtitulo-rol {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e3c72; /* Tono azul corporativo acorde a tus secciones */
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.about-texto p {
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+
+/* Contenedor del botón de LinkedIn alineado a la izquierda */
+.about-linkedin-wrapper {
+    margin-top: 25px;
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0d1225; /* Tu azul noche característico */
+    color: white;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.linkedin-btn:hover {
+    background-color: #1e3c72;
+    transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el ratón */
+    color: white;
+}
+
+/* Contenedor de la foto 3:4 limpia (sin badges superpuestos) */
 .about-imagen-container {
     flex-shrink: 0;
-    position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
 }
 
-.about-imagen-container:hover {
-    transform: translateY(-5px); /* Efecto flotante sutil al pasar el ratón */
-}
-
-/* Forzar formato vertical 3:4 (por ejemplo, 300px de ancho por 400px de alto) */
+/* Forzar formato vertical 3:4 */
 .foto-about-3-4 {
     width: 260px;
     height: 347px;
     object-fit: cover;
     display: block;
 }
-
-/* Botón flotante de LinkedIn integrado en la esquina de la foto */
-.linkedin-badge {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(13, 18, 37, 0.85); /* Tu tono azul noche con transparencia */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 0;
-    font-family: 'Jost', sans-serif;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: background 0.3s ease;
-}
-
 .about-imagen-container:hover .linkedin-badge {
     background: rgba(13, 18, 37, 0.95); /* Se oscurece ligeramente al hacer hover */
 }
