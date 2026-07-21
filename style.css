@@ -184,9 +184,9 @@ h1 {
     background: rgba(13, 18, 37, 0.95); /* Se oscurece ligeramente al hacer hover */
 }
 
-/* --- SECCIÓN SKILLS --- */
+/* --- SECCIÓN SKILLS CON LOGOS Y DESCRIPCIONES --- */
 .skills-container-general {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     text-align: center;
 }
@@ -200,20 +200,18 @@ h1 {
     margin-bottom: 40px !important;
 }
 
-/* Cuadrícula adaptable para las tarjetas de habilidades */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
     text-align: left;
 }
 
-/* Tarjeta individual para cada categoría */
 .skill-card {
     background-color: white;
     border: 1px solid #e1e4e8;
     border-radius: 10px;
-    padding: 25px;
+    padding: 22px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -225,16 +223,61 @@ h1 {
 
 .skill-card h3 {
     margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 1.25rem;
+    margin-bottom: 18px;
+    font-size: 1.2rem;
     color: #1e3c72;
     font-weight: 600;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 8px;
 }
 
-.skill-card p {
-    margin: 0;
-    font-size: 1.05rem;
-    color: #444;
-    line-height: 1.5;
-    max-width: none; /* Asegura que el texto use todo el ancho de la tarjeta */
+/* Lista interna de softwares */
+.software-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Cada elemento de software con su enlace */
+.software-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.software-item:hover {
+    background-color: #f4f6f8;
+}
+
+/* Estilo del logotipo */
+.software-logo {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Textos internos del software */
+.software-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.software-name {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #0d1225;
+}
+
+.software-desc {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.3;
 }
