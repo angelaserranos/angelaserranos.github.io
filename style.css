@@ -2,8 +2,8 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; /* Una fuente limpia y sencilla */
-    scroll-behavior: smooth; /* Esto hace que el salto a las secciones sea un deslizamiento suave */
+    font-family: 'Mulish', sans-serif; /* ¡Aquí aplicamos la nueva fuente! */
+    scroll-behavior: smooth;
 }
 
 /* --- MENÚ ARRIBA A LA DERECHA --- */
