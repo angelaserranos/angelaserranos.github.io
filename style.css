@@ -13,7 +13,7 @@ body, html {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 4px 40px; /* Reducido a 4px arriba y abajo para que la barra sea finísima verticalmente */
+    padding: 10px 40px; /* Reducido a 4px arriba y abajo para que la barra sea finísima verticalmente */
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
@@ -28,7 +28,7 @@ body, html {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-size: 0.95rem; /* Letra un pelín más compacta */
-    padding: 4px 10px; /* Espacio interior mínimo vertical y horizontal para los botones */
+    padding:10px 10px; /* Espacio interior mínimo vertical y horizontal para los botones */
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
@@ -67,7 +67,7 @@ h1 {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid white;
+    border: 1px solid white;
     margin-bottom: 20px;
 }
 
