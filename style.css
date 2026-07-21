@@ -184,7 +184,7 @@ h1 {
     background: rgba(13, 18, 37, 0.95); /* Se oscurece ligeramente al hacer hover */
 }
 
-/* --- SECCIÓN SKILLS CON LOGOS Y DESCRIPCIONES --- */
+/* --- SECCIÓN SKILLS ESTILO MODERNO (Toha-like) --- */
 .skills-container-general {
     max-width: 1100px;
     margin: 0 auto;
@@ -200,84 +200,85 @@ h1 {
     margin-bottom: 40px !important;
 }
 
-.skills-grid {
+/* Cuadrícula de categorías principales */
+.skills-grid-modern {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+    gap: 30px;
     text-align: left;
 }
 
-.skill-card {
+/* Caja de cada categoría */
+.skill-category-box {
     background-color: white;
     border: 1px solid #e1e4e8;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 22px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.skill-card h3 {
+.skill-category-box h3 {
     margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-size: 1.15rem;
     color: #1e3c72;
     font-weight: 600;
     border-bottom: 2px solid #f0f2f5;
     padding-bottom: 8px;
 }
 
-/* Lista interna de softwares */
-.software-list {
+/* Contenedor de las tarjetas de software dentro de la caja */
+.software-cards-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
 }
 
-/* Cada elemento de software con su enlace */
-.software-item {
+/* Tarjeta individual de cada software (que funciona entera como enlace) */
+.software-card {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 8px;
     text-decoration: none;
-    padding: 6px 8px;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
+    transition: all 0.25s ease;
 }
 
-.software-item:hover {
-    background-color: #f4f6f8;
+.software-card:hover {
+    background-color: #ffffff;
+    border-color: #1e3c72;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 60, 114, 0.1);
 }
 
-/* Estilo del logotipo */
-.software-logo {
-    width: 26px;
-    height: 26px;
+/* Logotipo pequeño a la izquierda */
+.sw-logo {
+    width: 28px;
+    height: 28px;
     object-fit: contain;
     flex-shrink: 0;
 }
 
-/* Textos internos del software */
-.software-info {
+/* Textos de la tarjeta */
+.sw-text {
     display: flex;
     flex-direction: column;
 }
 
-.software-name {
+.sw-name {
     font-family: 'Jost', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     color: #0d1225;
 }
 
-.software-desc {
+.sw-desc {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
-    font-size: 0.82rem;
-    color: #666;
+    font-size: 0.8rem;
+    color: #64748b;
     line-height: 1.3;
 }
