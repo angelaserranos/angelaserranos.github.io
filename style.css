@@ -1,31 +1,24 @@
-/* --- CONFIGURACIÓN GENERAL --- */
+/* --- CONFIGURACION GENERAL --- */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Jost', sans-serif; /* Se aplica al nombre, menú y texto dinámico */
+    font-family: 'Jost', sans-serif;
     scroll-behavior: smooth;
 }
 
-
-/* MENUS */
+/* MENUS - Altura vertical ultra fina */
 .menu-superior {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px 10px;
+    padding: 4px 40px; /* Reducido a 4px arriba y abajo para que la barra sea finísima verticalmente */
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
-    background-color: #0d1225; /* ¡Aquí está tu color fijo desde el principio! */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Le dejamos la sombra para que se separe del fondo */
-}
-
-/* Esta clase se añadirá automáticamente con JavaScript al empezar a bajar */
-.menu-superior.scrolled {
-    background-color: #1e3c72; /* Usamos el azul oscuro para el fondo del menú al hacer scroll */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Un poco de sombra para separarlo del contenido */
+    background-color: #0d1225;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .menu-superior a {
@@ -34,26 +27,25 @@ body, html {
     margin-left: 15px;
     font-family: 'Jost', sans-serif;
     font-weight: 500;
-    font-size: 1.1rem;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease; 
+    font-size: 0.95rem; /* Letra un pelín más compacta */
+    padding: 4px 10px; /* Espacio interior mínimo vertical y horizontal para los botones */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-/* Sombreado al pasar por encima Y resaltado de la sección activa */
+/* Sombreado al pasar por encima Y resaltado de la seccion activa */
 .menu-superior a:hover,
-.menu-superior a.activo { 
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: white !important; 
+.menu-superior a.activo {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white !important;
 }
-
 
 /* Nuevo h1 */
 h1 {
     margin: 0;
-    font-family: 'Jost', sans-serif; /* Forzamos la fuente por si acaso no la estaba heredando */
+    font-family: 'Jost', sans-serif;
     font-size: 2.8rem;
-    font-weight: 400; /* Le bajamos el grosor (de 700 a 400) para que no se vea tan ancha */
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
@@ -64,11 +56,9 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     background-image: url('fondo3.jpg');
-    background-size: cover; /* Hace que la imagen ocupe toda la pantalla sin deformarse */
-    background-position: center; /* Centra la imagen */
-    
+    background-size: cover;
+    background-position: center;
     color: white;
 }
 
