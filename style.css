@@ -35,7 +35,7 @@ body, html {
     justify-content: center; /* Centra verticalmente */
     
     /* Fondo con foto cielo */
-    background-image: url('fondo.jpg');
+    background-image: url('fondo2.jpg');
     background-size: cover; /* Hace que la imagen ocupe toda la pantalla sin deformarse */
     background-position: center; /* Centra la imagen */
     color: white;
