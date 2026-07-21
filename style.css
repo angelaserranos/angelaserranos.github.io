@@ -438,3 +438,92 @@ h1 {
     object-fit: cover;
     display: block;
 }
+
+/* --- DISEÑO RESPONSIVO PARA MÓVILES --- */
+@media screen and (max-width: 768px) {
+
+    /* 1. Menú superior más compacto y adaptado */
+    .menu-superior {
+        padding: 8px 15px;
+        justify-content: center; /* Centra los enlaces del menú en pantallas pequeñas */
+        background-color: #0d1225 !important; /* Mantiene el fondo fijo para que sea legible */
+    }
+
+    .menu-superior a {
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    /* 2. Sección Portada (Título y subtítulo) */
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .subtitulo {
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    /* 3. Sección About: Pasa de horizontal a vertical */
+    .seccion#about {
+        padding: 60px 20px !important; /* Iguala los márgenes laterales */
+    }
+
+    .about-container {
+        flex-direction: column-reverse; /* Pone la foto arriba y el texto debajo (o viceversa) */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .about-texto h2, 
+    .about-subtitulo-rol, 
+    .about-texto p {
+        text-align: center; /* Centra los textos en móvil para mejor estética */
+    }
+
+    .about-linkedin-wrapper {
+        display: flex;
+        justify-content: center; /* Centra el botón de LinkedIn */
+    }
+
+    .foto-about-3-4 {
+        width: 220px;
+        height: 293px; /* Reduce un poco la foto para que no acapare toda la pantalla del móvil */
+        margin: 0 auto;
+    }
+
+    /* 4. Secciones generales y Skills / Experience */
+    .seccion {
+        padding: 60px 20px; /* Reduce los márgenes laterales gigantes (de 40px a 20px) */
+    }
+
+    .skills-grid-modern {
+        grid-template-columns: 1fr; /* Las tarjetas de skills pasan a una sola columna */
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr; /* Las tarjetas de experiencia a una sola columna */
+    }
+
+    /* Ajuste para las filas de experiencia en móvil */
+    .exp-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .exp-header-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .exp-card-nologo {
+        padding-left: 20px;
+    }
+}
