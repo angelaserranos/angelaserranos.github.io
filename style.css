@@ -6,12 +6,25 @@ body, html {
     scroll-behavior: smooth;
 }
 
+
 /* MENUS */
 .menu-superior {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    z-index: 10;
+    position: fixed; /* Para que se vea al bajar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end; /* Mantiene los enlaces a la derecha */
+    z-index: 1000; /* Asegura que el menú pase siempre por encima del resto de la web */
+    transition: background-color 0.3s ease; /* Hace que el color de fondo cambie suavemente */
+}
+
+/* Esta clase se añadirá automáticamente con JavaScript al empezar a bajar */
+.menu-superior.scrolled {
+    background-color: #1e3c72; /* Usamos el azul oscuro para el fondo del menú al hacer scroll */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Un poco de sombra para separarlo del contenido */
 }
 
 .menu-superior a {
@@ -23,17 +36,18 @@ body, html {
     font-size: 1.1rem;
     padding: 8px 16px;
     border-radius: 6px;
-    transition: background-color 0.3s ease; /* Transición suave solo para el fondo */
+    transition: background-color 0.3s ease; 
 }
 
-/* Sombreado al pasar por encima */
-.menu-superior a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo gris claro translúcido */
-    color: white !important; /* El !important fuerza a que la letra siga blanca pase lo que pase */
+/* Sombreado al pasar por encima Y resaltado de la sección activa */
+.menu-superior a:hover,
+.menu-superior a.activo { 
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white !important; 
 }
 
 
-/* --- 2. SUSTITUYE LA PARTE DE TU NOMBRE (h1) POR ESTO --- */
+/* Nuevo h1 */
 h1 {
     margin: 0;
     font-family: 'Jost', sans-serif; /* Forzamos la fuente por si acaso no la estaba heredando */
