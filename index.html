@@ -4,49 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ángela Serranos Valencia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. BARRA DE NAVEGACIÓN -->
-    <!-- Estará fija en la parte superior. Los enlaces con "#" apuntan a los "id" de las secciones de abajo -->
-    <nav class="barra-navegacion">
-        <div class="logo">
-            <img src="https://via.placeholder.com/30" alt="Logo" class="logo-img">
-            <span>Ángela</span>
-        </div>
-        <ul class="enlaces">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-        </ul>
+    <!-- MENÚ: Arriba a la derecha -->
+    <nav class="menu-superior">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#experiencia">Experiencia</a>
     </nav>
 
-    <!-- 2. PORTADA A PANTALLA COMPLETA (Hero Section) -->
-    <!-- Le damos el id="inicio" para que el botón de arriba funcione -->
-    <header id="inicio" class="portada">
-        <div class="contenido-centrado">
-            <img src="https://via.placeholder.com/150" alt="Ángela" class="foto-perfil">
-            <h1>Hola, soy Ángela</h1>
-            <p class="subtitulo">Soy Ingeniera Aeroespacial<span class="cursor">|</span></p>
-        </div>
-        <!-- Flecha para indicar que hay que bajar -->
-        <a href="#sobre-mi" class="flecha-bajar">v</a>
+    <!-- PORTADA: Foto y nombre centrados con fondo -->
+    <header class="portada">
+        <img src="https://via.placeholder.com/150" alt="Foto de Ángela" class="foto-perfil">
+        <h1>Ángela Serranos Valencia</h1>
     </header>
 
-    <!-- 3. EL RESTO DE SECCIONES DE LA WEB -->
-    <!-- Al bajar (hacer scroll), aparecerán estas secciones -->
+    <!-- SECCIONES DE LA WEB -->
+    <!-- Al pinchar en el menú, la web bajará hasta estos identificadores (id) -->
+    
     <section id="sobre-mi" class="seccion">
         <h2>Sobre mí</h2>
-        <p>Aquí irá tu texto de presentación...</p>
+        <p>Aquí irá tu presentación. Soy estudiante del Máster en Ingeniería Aeronáutica...</p>
     </section>
 
     <section id="habilidades" class="seccion">
         <h2>Habilidades</h2>
-        <p>MATLAB, Python, C, LaTeX...</p>
+        <p>MATLAB, Python, C, LaTeX, herramientas de análisis térmico y estructural.</p>
     </section>
 
     <section id="experiencia" class="seccion">
