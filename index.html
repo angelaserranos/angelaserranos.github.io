@@ -4,33 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ángela Serranos Valencia</title>
-
-    <!-- Estos tres enlaces importan la fuente Mulish desde Google -->
+    
+    <!-- Importamos la fuente Jost desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
 
-    <!-- MENÚ: Arriba a la derecha -->
     <nav class="menu-superior">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#habilidades">Habilidades</a>
         <a href="#experiencia">Experiencia</a>
     </nav>
 
-    <!-- PORTADA: Foto y nombre centrados con fondo -->
     <header class="portada">
-        <img src="foto.jpg" alt="Foto de Ángela" class="foto-perfil">
+        <img src="perfil.jpg" alt="Foto de Ángela" class="foto-perfil">
         <h1>Ángela Serranos Valencia</h1>
+        
+        <!-- Aquí está el contenedor para el efecto dinámico -->
+        <p class="subtitulo">Soy <span id="texto-dinamico"></span></p>
     </header>
 
-    <!-- SECCIONES DE LA WEB -->
-    <!-- Al pinchar en el menú, la web bajará hasta estos identificadores (id) -->
-    
     <section id="sobre-mi" class="seccion">
         <h2>Sobre mí</h2>
         <p>Aquí irá tu presentación. Soy estudiante del Máster en Ingeniería Aeronáutica...</p>
@@ -46,5 +43,23 @@
         <p>Madrid Space, Case Western Reserve University...</p>
     </section>
 
+    <!-- ===== JAVASCRIPT ===== -->
+    <!-- 1. Importamos la librería Typed.js desde internet -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <!-- 2. Le decimos qué tiene que escribir -->
+    <script>
+        var typed = new Typed('#texto-dinamico', {
+            strings: [
+                'Ingeniera Aeroespacial.', 
+                'especialista en análisis estructural y térmico.', 
+                'programadora en MATLAB y Python.'
+            ],
+            typeSpeed: 60,    /* Velocidad al escribir cada letra */
+            backSpeed: 40,    /* Velocidad al borrar */
+            backDelay: 1500,  /* Tiempo de pausa antes de empezar a borrar */
+            loop: true        /* Hace que se repita en bucle infinito */
+        });
+    </script>
 </body>
 </html>
