@@ -4,31 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ángela Serranos Valencia - Portfolio</title>
-    <!-- Importamos la fuente Mulish (la misma de Toha) -->
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- Conectamos con tu futuro archivo de diseño -->
+    <!-- Fuente oficial de Toha -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="contenedor">
-        <!-- Tarjeta Principal (Hero) -->
-        <header class="tarjeta hero">
+    <div class="contenedor-toha">
+        
+        <!-- BARRA LATERAL (Perfil) -->
+        <aside class="sidebar tarjeta">
             <div class="foto-perfil"></div>
             <h1>Ángela Serranos Valencia</h1>
-            <h2>Ingeniera Aeroespacial</h2>
-            <p>Especializada en análisis estructural, térmico y desarrollo de herramientas computacionales.</p>
-        </header>
-
-        <!-- Sección de Experiencia -->
-        <section class="seccion">
-            <h3>Experiencia Destacada</h3>
-            <div class="tarjeta experiencia">
-                <h4>Ingeniera en Prácticas</h4>
-                <p class="empresa">Madrid Space | 2024 - Presente</p>
-                <p>Desarrollo y ejecución de análisis estructurales y térmicos.</p>
+            <h2>Máster en Ingeniería Aeronáutica</h2>
+            <div class="datos-contacto">
+                <p>📍 Madrid, España</p>
+                <p>🎓 Universidad Carlos III de Madrid</p>
             </div>
-        </section>
+        </aside>
+
+        <!-- ÁREA PRINCIPAL (Contenido) -->
+        <main class="contenido-principal">
+            
+            <!-- Sección: Sobre Mí -->
+            <section class="tarjeta seccion">
+                <h3>Sobre Mí</h3>
+                <p>Ingeniera aeroespacial especializada en el desarrollo y ejecución de análisis estructurales y térmicos. Apasionada por la optimización de herramientas computacionales y la resolución de problemas analíticos complejos.</p>
+            </section>
+
+            <!-- Sección: Experiencia -->
+            <section class="tarjeta seccion">
+                <h3>Experiencia</h3>
+                
+                <div class="item-experiencia">
+                    <div class="cabecera-item">
+                        <h4>Ingeniera en Prácticas (Análisis Estructural y Térmico)</h4>
+                        <span class="fecha">2024 - Presente</span>
+                    </div>
+                    <p class="empresa">Madrid Space</p>
+                    <p class="descripcion">Desarrollo de análisis estructurales, térmicos y modelado numérico para aplicaciones aeroespaciales.</p>
+                </div>
+
+                <div class="item-experiencia">
+                    <div class="cabecera-item">
+                        <h4>Teaching Assistant - Instrumentación en Ingeniería</h4>
+                        <span class="fecha">Programa Study Abroad</span>
+                    </div>
+                    <p class="empresa">Case Western Reserve University (Ohio)</p>
+                    <p class="descripcion">Evaluación de trabajos académicos, asistencia técnica y resolución de dudas durante los horarios de tutoría para estudiantes de ingeniería.</p>
+                </div>
+            </section>
+
+            <!-- Sección: Habilidades y Herramientas -->
+            <section class="tarjeta seccion">
+                <h3>Herramientas Computacionales</h3>
+                <div class="contenedor-etiquetas">
+                    <span class="etiqueta">MATLAB</span>
+                    <span class="etiqueta">Python</span>
+                    <span class="etiqueta">C</span>
+                    <span class="etiqueta">LaTeX</span>
+                </div>
+            </section>
+
+        </main>
     </div>
 
 </body>
