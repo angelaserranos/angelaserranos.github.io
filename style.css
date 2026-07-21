@@ -56,7 +56,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('fondo4.png');
+    background-image: url('images/fondo4.png');
     background-size: cover;
     background-position: center;
     color: white;
