@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ángela Serranos Valencia</title>
     
-    <!-- Importamos la fuente Jost desde Google Fonts -->
+    <!-- Fuente Jost para todo el documento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,51 +14,50 @@
 </head>
 <body>
 
+    <!-- MENÚ SUPERIOR -->
     <nav class="menu-superior">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#experiencia">Experiencia</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
     </nav>
 
+    <!-- PORTADA -->
     <header class="portada">
-        <img src="perfil.jpg" alt="Foto de Ángela" class="foto-perfil">
+        <img src="foto.jpg" alt="Profile Picture" class="foto-perfil">
         <h1>Ángela Serranos Valencia</h1>
         
-        <!-- Aquí está el contenedor para el efecto dinámico -->
-        <p class="subtitulo">Soy <span id="texto-dinamico"></span></p>
+        <p class="subtitulo">I am <span id="texto-dinamico"></span></p>
     </header>
 
-    <section id="sobre-mi" class="seccion">
-        <h2>Sobre mí</h2>
-        <p>Aquí irá tu presentación. Soy estudiante del Máster en Ingeniería Aeronáutica...</p>
+    <!-- SECCIONES -->
+    <section id="about" class="seccion">
+        <h2>About</h2>
+        <p>Master's student in Aeronautical Engineering with a strong background in aerospace engineering. Passionate about solving complex analytical problems and optimizing computational tools.</p>
     </section>
 
-    <section id="habilidades" class="seccion">
-        <h2>Habilidades</h2>
-        <p>MATLAB, Python, C, LaTeX, herramientas de análisis térmico y estructural.</p>
+    <section id="skills" class="seccion">
+        <h2>Skills</h2>
+        <p>MATLAB, Python, C, LaTeX, Structural and Thermal Analysis Tools.</p>
     </section>
 
-    <section id="experiencia" class="seccion">
-        <h2>Experiencia</h2>
-        <p>Madrid Space, Case Western Reserve University...</p>
+    <section id="experience" class="seccion">
+        <h2>Experience</h2>
+        <p>Engineering Intern at Madrid Space | Former Teaching Assistant at Case Western Reserve University.</p>
     </section>
 
     <!-- ===== JAVASCRIPT ===== -->
-    <!-- 1. Importamos la librería Typed.js desde internet -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    
-    <!-- 2. Le decimos qué tiene que escribir -->
     <script>
         var typed = new Typed('#texto-dinamico', {
             strings: [
-                'Ingeniera Aeroespacial.', 
-                'especialista en análisis estructural y térmico.', 
-                'programadora en MATLAB y Python.'
+                'an Aerospace Engineer.', 
+                'specialized in structural and thermal analysis.', 
+                'a MATLAB and Python programmer.'
             ],
-            typeSpeed: 60,    /* Velocidad al escribir cada letra */
-            backSpeed: 40,    /* Velocidad al borrar */
-            backDelay: 1500,  /* Tiempo de pausa antes de empezar a borrar */
-            loop: true        /* Hace que se repita en bucle infinito */
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true
         });
     </script>
 </body>
