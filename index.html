@@ -3,71 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ángela Serranos Valencia - Portfolio</title>
-    <!-- Fuente oficial de Toha -->
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>Ángela Serranos Valencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="contenedor-toha">
-        
-        <!-- BARRA LATERAL (Perfil) -->
-        <aside class="sidebar tarjeta">
-            <div class="foto-perfil"></div>
-            <h1>Ángela Serranos Valencia</h1>
-            <h2>Máster en Ingeniería Aeronáutica</h2>
-            <div class="datos-contacto">
-                <p>📍 Madrid, España</p>
-                <p>🎓 Universidad Carlos III de Madrid</p>
-            </div>
-        </aside>
+    <!-- 1. BARRA DE NAVEGACIÓN -->
+    <!-- Estará fija en la parte superior. Los enlaces con "#" apuntan a los "id" de las secciones de abajo -->
+    <nav class="barra-navegacion">
+        <div class="logo">
+            <img src="https://via.placeholder.com/30" alt="Logo" class="logo-img">
+            <span>Ángela</span>
+        </div>
+        <ul class="enlaces">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+        </ul>
+    </nav>
 
-        <!-- ÁREA PRINCIPAL (Contenido) -->
-        <main class="contenido-principal">
-            
-            <!-- Sección: Sobre Mí -->
-            <section class="tarjeta seccion">
-                <h3>Sobre Mí</h3>
-                <p>Ingeniera aeroespacial especializada en el desarrollo y ejecución de análisis estructurales y térmicos. Apasionada por la optimización de herramientas computacionales y la resolución de problemas analíticos complejos.</p>
-            </section>
+    <!-- 2. PORTADA A PANTALLA COMPLETA (Hero Section) -->
+    <!-- Le damos el id="inicio" para que el botón de arriba funcione -->
+    <header id="inicio" class="portada">
+        <div class="contenido-centrado">
+            <img src="https://via.placeholder.com/150" alt="Ángela" class="foto-perfil">
+            <h1>Hola, soy Ángela</h1>
+            <p class="subtitulo">Soy Ingeniera Aeroespacial<span class="cursor">|</span></p>
+        </div>
+        <!-- Flecha para indicar que hay que bajar -->
+        <a href="#sobre-mi" class="flecha-bajar">v</a>
+    </header>
 
-            <!-- Sección: Experiencia -->
-            <section class="tarjeta seccion">
-                <h3>Experiencia</h3>
-                
-                <div class="item-experiencia">
-                    <div class="cabecera-item">
-                        <h4>Ingeniera en Prácticas (Análisis Estructural y Térmico)</h4>
-                        <span class="fecha">2024 - Presente</span>
-                    </div>
-                    <p class="empresa">Madrid Space</p>
-                    <p class="descripcion">Desarrollo de análisis estructurales, térmicos y modelado numérico para aplicaciones aeroespaciales.</p>
-                </div>
+    <!-- 3. EL RESTO DE SECCIONES DE LA WEB -->
+    <!-- Al bajar (hacer scroll), aparecerán estas secciones -->
+    <section id="sobre-mi" class="seccion">
+        <h2>Sobre mí</h2>
+        <p>Aquí irá tu texto de presentación...</p>
+    </section>
 
-                <div class="item-experiencia">
-                    <div class="cabecera-item">
-                        <h4>Teaching Assistant - Instrumentación en Ingeniería</h4>
-                        <span class="fecha">Programa Study Abroad</span>
-                    </div>
-                    <p class="empresa">Case Western Reserve University (Ohio)</p>
-                    <p class="descripcion">Evaluación de trabajos académicos, asistencia técnica y resolución de dudas durante los horarios de tutoría para estudiantes de ingeniería.</p>
-                </div>
-            </section>
+    <section id="habilidades" class="seccion">
+        <h2>Habilidades</h2>
+        <p>MATLAB, Python, C, LaTeX...</p>
+    </section>
 
-            <!-- Sección: Habilidades y Herramientas -->
-            <section class="tarjeta seccion">
-                <h3>Herramientas Computacionales</h3>
-                <div class="contenedor-etiquetas">
-                    <span class="etiqueta">MATLAB</span>
-                    <span class="etiqueta">Python</span>
-                    <span class="etiqueta">C</span>
-                    <span class="etiqueta">LaTeX</span>
-                </div>
-            </section>
-
-        </main>
-    </div>
+    <section id="experiencia" class="seccion">
+        <h2>Experiencia</h2>
+        <p>Madrid Space, Case Western Reserve University...</p>
+    </section>
 
 </body>
 </html>
