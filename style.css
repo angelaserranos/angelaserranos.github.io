@@ -1,81 +1,92 @@
 /* --- CONFIGURACIÓN GENERAL --- */
-
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Jost', sans-serif; /* Aquí aplicamos la fuente del menú de Toha */
+    font-family: 'Jost', sans-serif; /* Se aplica al nombre, menú y texto dinámico */
     scroll-behavior: smooth;
 }
 
 /* --- MENÚ ARRIBA A LA DERECHA --- */
 .menu-superior {
-    position: absolute; /* Lo saca del flujo normal para ponerlo donde queramos */
+    position: absolute;
     top: 20px;
     right: 40px;
-    z-index: 10; /* Asegura que el menú esté siempre por encima del fondo */
+    z-index: 10;
 }
 
 .menu-superior a {
-    color: white; /* Color de las letras del menú */
-    text-decoration: none; /* Quita el subrayado */
-    margin-left: 20px; /* Separación entre las palabras */
-    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
     font-size: 1.1rem;
+    padding: 8px 16px; /* Espacio para que la sombra parezca un botón */
+    border-radius: 6px; /* Bordes redondeados para la sombra */
+    transition: all 0.3s ease; /* Hace que el sombreado aparezca suavemente */
 }
 
+/* EFECTO SOMBREADO AL PASAR EL RATÓN */
 .menu-superior a:hover {
-    color: #ffd700; /* Se vuelve amarillo al pasar el ratón */
+    background-color: rgba(0, 0, 0, 0.25); /* Un fondo oscuro semitransparente */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* La sombra exterior */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); /* Un ligero brillo en el texto */
 }
 
 /* --- PORTADA CENTRADA --- */
 .portada {
-    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
+    align-items: center;
+    justify-content: center;
     
-    /* Fondo con foto cielo */
-    background-image: url('fondo2.jpg');
-    background-size: cover; /* Hace que la imagen ocupe toda la pantalla sin deformarse */
-    background-position: center; /* Centra la imagen */
+    /* Fondo temporal (cambia el nombre de tu imagen aquí si pones una) */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
-}
-
-.subtitulo {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #e0e0e0; /* Un gris muy clarito para que no quite protagonismo al nombre */
-    font-weight: 400;
 }
 
 .foto-perfil {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Hace la foto redonda */
-    object-fit: cover; /* Evita que la foto se deforme */
+    border-radius: 50%;
+    object-fit: cover;
     border: 4px solid white;
     margin-bottom: 20px;
 }
 
 h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
     letter-spacing: 1px;
+}
+
+.subtitulo {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: #e0e0e0;
+    font-weight: 400;
 }
 
 /* --- SECCIONES INFERIORES --- */
 .seccion {
-    padding: 80px 40px; /* Espacio por arriba y por los lados */
-    min-height: 50vh; /* Cada sección ocupa al menos la mitad de la pantalla */
+    padding: 80px 40px;
+    min-height: 50vh;
     background-color: #f9f9f9;
     color: #333;
-    text-align: center; /* Centra el texto de las secciones */
-    border-bottom: 1px solid #ddd; /* Una línea fina para separar secciones */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 .seccion h2 {
     font-size: 2rem;
-    color: #1e3c72; /* El mismo azul del fondo para mantener el estilo */
+    color: #1e3c72;
     margin-bottom: 20px;
+}
+
+.seccion p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
