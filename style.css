@@ -6,7 +6,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* --- MENÚ ARRIBA A LA DERECHA --- */
+/* MENUS */
 .menu-superior {
     position: absolute;
     top: 20px;
@@ -18,18 +18,28 @@ body, html {
     color: white;
     text-decoration: none;
     margin-left: 15px;
+    font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
-    padding: 8px 16px; /* Espacio para que la sombra parezca un botón */
-    border-radius: 6px; /* Bordes redondeados para la sombra */
-    transition: all 0.3s ease; /* Hace que el sombreado aparezca suavemente */
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease; /* Transición suave solo para el fondo */
 }
 
-/* EFECTO SOMBREADO AL PASAR EL RATÓN */
+/* Sombreado al pasar por encima */
 .menu-superior a:hover {
-    background-color: rgba(0, 0, 0, 0.25); /* Un fondo oscuro semitransparente */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* La sombra exterior */
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); /* Un ligero brillo en el texto */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo gris claro translúcido */
+    color: white !important; /* El !important fuerza a que la letra siga blanca pase lo que pase */
+}
+
+
+/* --- 2. SUSTITUYE LA PARTE DE TU NOMBRE (h1) POR ESTO --- */
+h1 {
+    margin: 0;
+    font-family: 'Jost', sans-serif; /* Forzamos la fuente por si acaso no la estaba heredando */
+    font-size: 2.8rem;
+    font-weight: 400; /* Le bajamos el grosor (de 700 a 400) para que no se vea tan ancha */
+    letter-spacing: 1px;
 }
 
 /* --- PORTADA CENTRADA --- */
