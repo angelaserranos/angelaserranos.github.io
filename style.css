@@ -65,7 +65,7 @@ h1 {
     align-items: center;
     justify-content: center;
     
-    background-image: url('fondo4.jpg');
+    background-image: url('fondo3.jpg');
     background-size: cover; /* Hace que la imagen ocupe toda la pantalla sin deformarse */
     background-position: center; /* Centra la imagen */
     
