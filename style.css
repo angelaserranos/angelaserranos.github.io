@@ -56,7 +56,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('fondo4.jpg');
+    background-image: url('fondo4.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -99,4 +99,69 @@ h1 {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+}
+
+/* --- SECCIÓN ABOUT (Diseño de dos columnas) --- */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px; /* Amplio espacio horizontal */
+    margin: 0 auto;
+    gap: 50px; /* Separación elegante entre texto y foto */
+    text-align: left; /* Alineado a la izquierda para un look profesional tipo portfolio */
+}
+
+.about-texto {
+    flex: 1; /* Hace que el texto ocupe todo el espacio sobrante a lo ancho */
+}
+
+.about-texto h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+/* Contenedor de la foto 3:4 */
+.about-imagen-container {
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-imagen-container:hover {
+    transform: translateY(-5px); /* Efecto flotante sutil al pasar el ratón */
+}
+
+/* Forzar formato vertical 3:4 (por ejemplo, 300px de ancho por 400px de alto) */
+.foto-about-3-4 {
+    width: 260px;
+    height: 347px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Botón flotante de LinkedIn integrado en la esquina de la foto */
+.linkedin-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 18, 37, 0.85); /* Tu tono azul noche con transparencia */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+}
+
+.about-imagen-container:hover .linkedin-badge {
+    background: rgba(13, 18, 37, 0.95); /* Se oscurece ligeramente al hacer hover */
 }
