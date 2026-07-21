@@ -34,8 +34,10 @@ body, html {
     align-items: center; /* Centra horizontalmente */
     justify-content: center; /* Centra verticalmente */
     
-    /* Un fondo cualquiera (degradado de azul oscuro a gris) */
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    /* Fondo con foto cielo */
+    background-image: url('fondo.jpg');
+    background-size: cover; /* Hace que la imagen ocupe toda la pantalla sin deformarse */
+    background-position: center; /* Centra la imagen */
     color: white;
 }
 
