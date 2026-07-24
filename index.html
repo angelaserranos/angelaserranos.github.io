@@ -206,14 +206,14 @@
 
             </div>
 
-            <!-- Frase requerida debajo de Habilidades -->
-            <div id="things-ive-done" style="margin-top: 30px;">
-                <p style="font-style: italic; color: #555;">Things I have done with these tools</p>
+            <!-- Frase requerida debajo de Habilidades con su ID -->
+            <div id="things-ive-done" style="margin-top: 30px; padding-top: 20px;">
+                <p style="font-style: italic; color: #555; font-size: 1.2rem;">Things I have done with these tools</p>
             </div>
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN PROJECTS -->
+    <!-- SECCIÓN PROJECTS -->
     <section id="projects" class="seccion">
         <div class="experience-container-general">
             <h2>Projects</h2>
@@ -234,7 +234,7 @@
                 </a>
 
                 <!-- Proyecto 2: Enlace al TFG -->
-                <a href="#education" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="setTimeout(() => { document.getElementById('tfg-item').scrollIntoView({behavior: 'smooth'}); }, 100);">
+                <a href="#tfg-item" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.getElementById('tfg-item').scrollIntoView({behavior: 'smooth'});">
                     <div class="exp-content">
                         <div class="exp-header-row">
                             <h3>Bachelor Thesis (TFG)</h3>
@@ -246,7 +246,7 @@
                 </a>
 
                 <!-- Proyecto 3: Enlace al proyecto de instituto -->
-                <a href="#education" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="setTimeout(() => { document.getElementById('hs-item').scrollIntoView({behavior: 'smooth'}); }, 100);">
+                <a href="#hs-item" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.getElementById('hs-item').scrollIntoView({behavior: 'smooth'});">
                     <div class="exp-content">
                         <div class="exp-header-row">
                             <h3>High School Research Project</h3>
@@ -284,12 +284,12 @@
                         <!-- Sub-bloque 1: Thermal Engineering -->
                         <div class="exp-subrole">
                             <span class="exp-subrole-title">Thermal Engineering Team (Sept 2025 - Apr 2026)</span>
-                            <p>Development of custom tools for ESATAN-TMS results post-processing optimization using Python scripts.</p>
+                            <p style="margin-bottom: 8px;">Development of custom tools for ESATAN-TMS results post-processing optimization using Python scripts.</p>
                             <p>This role strongly relies on the ability to identify process bottlenecks, planning of optimal development paths and continous application of the team's feedback.  </p>
                         </div>
 
                         <!-- Sub-bloque 2: Project Management -->
-                       <div class="exp-subrole" style="margin-top: 10px;">
+                        <div class="exp-subrole" style="margin-top: 10px;">
                             <span class="exp-subrole-title">Project Management & Business Development Team (May 2024 - Sept 2025)</span>
                             <ul style="margin: 8px 0 0 0; padding-left: 20px; line-height: 1.6;">
                                 <li style="margin-bottom: 8px;">Business development activities: identification of potential customers, industry events, CRM system management.</li>
