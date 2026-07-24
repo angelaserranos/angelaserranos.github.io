@@ -19,9 +19,9 @@
     <nav class="menu-superior">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
     </nav>
 
     <!-- PORTADA -->
@@ -206,57 +206,11 @@
 
             </div>
 
-            <!-- Frase requerida debajo de Habilidades con su ID -->
-            <div id="things-ive-done" style="margin-top: 30px; padding-top: 20px;">
-                <p style="font-style: italic; color: #555; font-size: 1.2rem;">Things I have done with these tools</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN PROJECTS -->
-    <section id="projects" class="seccion">
-        <div class="experience-container-general">
-            <h2>Projects</h2>
-            <p class="experience-descripcion">Key works and academic developments</p>
-            
-            <div class="experience-list">
-                
-                <!-- Proyecto 1: Enlace a las herramientas / "Things I have done" -->
-                <a href="#things-ive-done" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;">
-                    <div class="exp-content">
-                        <div class="exp-header-row">
-                            <h3>Tool Application & Practice</h3>
-                            <span class="exp-date">Overview</span>
-                        </div>
-                        <div class="exp-company">Technical Applications</div>
-                        <p>Things I have done with these tools</p>
-                    </div>
+            <!-- Frase con enlace directo a Projects -->
+            <div style="margin-top: 30px; padding-top: 20px;">
+                <a href="#projects" style="text-decoration: none;">
+                    <p style="font-style: italic; color: #1e3c72; font-size: 1.1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Things I have done with these tools</p>
                 </a>
-
-                <!-- Proyecto 2: Enlace al TFG -->
-                <a href="#tfg-item" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.getElementById('tfg-item').scrollIntoView({behavior: 'smooth'});">
-                    <div class="exp-content">
-                        <div class="exp-header-row">
-                            <h3>Bachelor Thesis (TFG)</h3>
-                            <span class="exp-date">2025</span>
-                        </div>
-                        <div class="exp-company">Design and Optimisation of a Hydraulic Brake</div>
-                        <p>More about my TFG</p>
-                    </div>
-                </a>
-
-                <!-- Proyecto 3: Enlace al proyecto de instituto -->
-                <a href="#hs-item" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.getElementById('hs-item').scrollIntoView({behavior: 'smooth'});">
-                    <div class="exp-content">
-                        <div class="exp-header-row">
-                            <h3>High School Research Project</h3>
-                            <span class="exp-date">2021</span>
-                        </div>
-                        <div class="exp-company">IES Arquitecto Ventura Rodríguez</div>
-                        <p>More about my project</p>
-                    </div>
-                </a>
-
             </div>
         </div>
     </section>
@@ -284,7 +238,7 @@
                         <!-- Sub-bloque 1: Thermal Engineering -->
                         <div class="exp-subrole">
                             <span class="exp-subrole-title">Thermal Engineering Team (Sept 2025 - Apr 2026)</span>
-                            <p style="margin-bottom: 8px;">Development of custom tools for ESATAN-TMS results post-processing optimization using Python scripts.</p>
+                            <p>Development of custom tools for ESATAN-TMS results post-processing optimization using Python scripts.</p>
                             <p>This role strongly relies on the ability to identify process bottlenecks, planning of optimal development paths and continous application of the team's feedback.  </p>
                         </div>
 
@@ -359,9 +313,9 @@
                     </div>
                 </div>
 
-                <!-- Educación 2: Bachelor's Degree in Aerospace Engineering (Con ID para el TFG) -->
-                <div class="exp-card exp-card-nologo" id="tfg-item">
-                    <div class="exp-content">
+                <!-- Educación 2: Bachelor's Degree in Aerospace Engineering (Enlace al proyecto TFG) -->
+                <a href="#projects" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.getElementById('projects').scrollIntoView({behavior: 'smooth'});">
+                    <div class="exp-content" style="width: 100%;">
                         <div class="exp-header-row">
                             <h3>Bachelor's Degree in Aerospace Engineering (UC3M)</h3>
                             <span class="exp-date">2021 - 2025</span>
@@ -371,7 +325,7 @@
                         <p><strong>Awards:</strong> Community of Madrid Excellence Scholarship, Santander Scholarship (2025).</p>
                         <p><strong>Final Bachelor Thesis:</strong> “Design and Optimisation of a Hydraulic Brake” with OpenFOAM and Gmsh. Grade: 9.2/10.</p>
                     </div>
-                </div>
+                </a>
 
                 <!-- Educación 3: Non-European Mobility -->
                 <div class="exp-card exp-card-nologo">
@@ -385,15 +339,63 @@
                     </div>
                 </div>
 
-                <!-- Educación 4: High School Excellence Program (Con ID para el proyecto de instituto) -->
-                <div class="exp-card exp-card-nologo" id="hs-item">
-                    <div class="exp-content">
+                <!-- Educación 4: High School Excellence Program (Enlace al proyecto de instituto) -->
+                <a href="#projects" class="exp-card exp-card-nologo" style="text-decoration: none; color: inherit;" onclick="event.preventDefault(); document.getElementById('projects').scrollIntoView({behavior: 'smooth'});">
+                    <div class="exp-content" style="width: 100%;">
                         <div class="exp-header-row">
                             <h3>IES ARQUITECTO VENTURA RODRIGUEZ</h3>
                             <span class="exp-date">2015 - 2021</span>
                         </div>
                         <div class="exp-company">High School Excellence Program</div>
                         <p>Graduated with honors in technological sciences modality. Final academic project focused on studying the presence of environmentally persistent chemicals (POPs) through statistical methods.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROJECTS (AHORA AL FINAL) -->
+    <section id="projects" class="seccion">
+        <div class="experience-container-general">
+            <h2>Projects</h2>
+            <p class="experience-descripcion">Key works and academic developments</p>
+            
+            <div class="experience-list">
+                
+                <!-- Proyecto 1 -->
+                <div class="exp-card exp-card-nologo">
+                    <div class="exp-content">
+                        <div class="exp-header-row">
+                            <h3>Tool Application & Practice</h3>
+                            <span class="exp-date">Overview</span>
+                        </div>
+                        <div class="exp-company">Technical Applications</div>
+                        <p>Things I have done with these tools</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: TFG -->
+                <div class="exp-card exp-card-nologo" id="tfg-item">
+                    <div class="exp-content">
+                        <div class="exp-header-row">
+                            <h3>Bachelor Thesis (TFG)</h3>
+                            <span class="exp-date">2025</span>
+                        </div>
+                        <div class="exp-company">Design and Optimisation of a Hydraulic Brake</div>
+                        <p>More about my TFG</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Instituto -->
+                <div class="exp-card exp-card-nologo" id="hs-item">
+                    <div class="exp-content">
+                        <div class="exp-header-row">
+                            <h3>High School Research Project</h3>
+                            <span class="exp-date">2021</span>
+                        </div>
+                        <div class="exp-company">IES Arquitecto Ventura Rodríguez</div>
+                        <p>More about my project</p>
                     </div>
                 </div>
 
