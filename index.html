@@ -442,17 +442,19 @@
 
                         
                     </div>
-                    <!-- Columna derecha con portada limpia arriba y rectangular ampliada abajo -->
+                    <!-- Columna derecha con portada encajada arriba y rectangular ampliada abajo -->
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0;">
-                        <!-- Imagen 1: Portada (sin contenedor de sombra, tamaño adaptativo exacto) -->
-                        <div style="display: flex; justify-content: center; width: 100%;">
+                        
+                        <!-- Imagen 1: Portada (con sombra encajada a sus proporciones auto) -->
+                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
                             <img src="images/Portada excelencia.jpg" alt="High School Research Project - Image 1" style="width: 260px; height: auto; display: block;">
                         </div>
                         
-                        <!-- Imagen 2: Contaminantes (con borde y sombra) -->
-                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center; width: 100%;">
+                        <!-- Imagen 2: Contaminantes -->
+                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
                             <img src="images/contaminantes.png" alt="Persistent Organic Pollutants Structure" style="width: 360px; height: 200px; object-fit: cover; display: block;">
                         </div>
+
                     </div>
                 </div>
 
