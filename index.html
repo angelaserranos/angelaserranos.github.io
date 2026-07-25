@@ -26,7 +26,9 @@
 
     <!-- PORTADA -->
     <header class="portada">
-        <img src="images/foto.jpg" alt="Profile Picture" class="foto-perfil">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+            <img src="images/foto.jpg" alt="Profile Picture" class="foto-perfil" style="object-position: center; display: block; margin: 0 auto 20px auto;">
+        </div>
         <h1>Ángela Serranos Valencia</h1>
         
         <p class="subtitulo"> <span id="texto-dinamico"></span></p>  
@@ -382,8 +384,8 @@
     </section>
 
     <!-- SECCIÓN PROJECTS (ESTILO ABOUT ME - 2 COLUMNAS) -->
-    <section id="projects" class="seccion" style="padding-left: 20px; padding-right: 20px;">
-        <div style="max-width: 1250px; margin: 0 auto; text-align: left;">
+    <section id="projects" class="seccion" style="padding-left: 40px; padding-right: 40px;">
+        <div style="max-width: 1350px; margin: 0 auto; text-align: left;">
             <div style="text-align: center; margin-bottom: 40px;">
                 <h2>Projects</h2>
                 <p class="experience-descripcion" style="margin: 0 auto;"></p>
@@ -392,7 +394,7 @@
             <div style="display: flex; flex-direction: column; gap: 60px;">
                 
                 <!-- Proyecto 1: Tool Application -->
-                <div class="about-container">
+                <div class="about-container" style="max-width: 1350px; gap: 70px;">
                     <div class="about-texto">
                         <span style="font-size: 0.85rem; color: #64748b; font-weight: 500; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">Overview</span>
                         
@@ -409,7 +411,7 @@
                 </div>
                 
                 <!-- Proyecto 2: TFG -->
-                <div class="about-container" id="project-tfg">
+                <div class="about-container" id="project-tfg" style="max-width: 1350px; gap: 70px;">
                     <div class="about-texto">
                         <span style="font-size: 0.85rem; color: #64748b; font-weight: 500; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">2025</span>
                         <h3 style="color: #1e3c72; font-size: 1.5rem; margin: 15px 0 5px 0;">Design and Optimisation of a Hydraulic Brake</h3>
@@ -423,7 +425,7 @@
                 </div>
 
                 <!-- Proyecto 3: Instituto (Con dos huecos: uno vertical 3:4 y otro rectangular más grande debajo) -->
-                <div class="about-container" id="project-hs">
+                <div class="about-container" id="project-hs" style="max-width: 1350px; gap: 70px;">
                     <div class="about-texto">
                         <span style="font-size: 0.85rem; color: #64748b; font-weight: 500; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">2021</span>
                         <h3 style="color: #1e3c72; font-size: 1.5rem; margin: 15px 0 5px 0;">Environmental Research on Persistent Pollutants</h3>
@@ -436,19 +438,19 @@
                         
                         <p style="margin: 0 0 15px 0; text-align: left;">The U-Mann-Whitney test was used to find statistical differences between Wastewater Treatment Plants (WWTPs) usign anaerobic and aerobic digesters. </p>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;">Results concluded that the use and production of these compounds has kept stable during the last years. No significant differences (neither increase nor decrease) in the concentrations were found based on the treatment method, suggesting that neither PBDEs nor PCDD/Fs are susceptible to incrase or decrease their presence by the use of anaerobic or aerobic digesters.</p>
+                        <p style="margin: 0; text-align: left;">Results concluded that the use and production of these compounds has kept stable during the last years. No significant differences (neither increase nor decrease) in the concentrations were found based on the treatment method, suggesting that neither PBDEs nor PCDD/Fs are susceptible to incrase or decrease their presence by the use of anaerobic or aerobic digesters.</p>
 
                         <p style="margin: 0 0 15px 0; text-align: left;">This project was my first contact with academy, requiring me to search for useful research papers related to the topic and figure out how to apply the different statistical methods to my data. Although it was a bit confusing at the beginning, it was a very enriching experience to increase my knowledge about a new topic and improve my problem-solving skills.  </p>
 
                         
                     </div>
-                    <!-- Columna derecha con imagen vertical 3:4 arriba y rectangular más grande abajo -->
-                    <div style="display: flex; flex-direction: column; gap: 20px; flex-shrink: 0; align-items: center;">
+                    <!-- Columna derecha con imagen vertical 3:4 arriba y rectangular ampliada abajo -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0;">
                         <div class="about-imagen-container" style="display: flex; justify-content: center; width: 100%;">
                             <img src="images/Portada excelencia.jpg" alt="High School Research Project - Image 1" class="foto-about-3-4" style="object-position: center;">
                         </div>
                         <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center; width: 100%;">
-                            <img src="images/contaminantes.png" alt="Persistent Organic Pollutants Structure" style="width: 320px; height: 180px; object-fit: cover; display: block;">
+                            <img src="images/contaminantes.png" alt="Persistent Organic Pollutants Structure" style="width: 360px; height: 200px; object-fit: cover; display: block;">
                         </div>
                     </div>
                 </div>
