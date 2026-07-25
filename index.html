@@ -409,18 +409,31 @@
                 </div>
                 
                 <!-- Proyecto 2: TFG -->
-                <div class="about-container" id="project-tfg" style="max-width: 1350px; gap: 70px;">
-                    <div class="about-texto">
-                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 500; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">2025</span>
-                        <h3 style="color: #1e3c72; font-size: 1.5rem; margin: 15px 0 5px 0;">Design and Optimisation of a Hydraulic Brake</h3>
-                        <h4 style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 1rem; color: #0d1225; margin-bottom: 15px;">Bachelor Thesis (TFG)</h4>
-                        <p style="margin: 0 0 15px 0; text-align: left;">Comprehensive study focused on the mechanical and fluid dynamic optimization of a hydraulic brake system, utilizing advanced open-source computational fluid dynamics and meshing frameworks such as OpenFOAM and Gmsh.</p>
-                        <p style="margin: 0; text-align: left;">The final evaluation yielded an outstanding grade of 9.2/10, demonstrating rigorous analytical validation and physical interpretation of results.</p>
-                    </div>
-                    <div class="about-imagen-container">
-                        <img src="images/proyecto-tfg.jpg" alt="Bachelor Thesis TFG" class="foto-about-3-4">
-                    </div>
-                </div>
+<div class="about-container" id="project-tfg" style="max-width: 1350px; gap: 70px;">
+    <div class="about-texto">
+        <span style="font-size: 0.85rem; color: #64748b; font-weight: 500; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">2025</span>
+        <h3 style="color: #1e3c72; font-size: 1.5rem; margin: 15px 0 5px 0;">Design and Optimisation of a Hydraulic Brake</h3>
+        <h4 style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 1rem; color: #0d1225; margin-bottom: 15px;">Bachelor Thesis (TFG)</h4>
+        
+        <p style="margin: 0 0 15px 0; text-align: left;">In the aerospace and heavy machinery industries, hydraulic brakes are essential due to their ability to transmit very high forces and their quick responsiveness[cite: 3]. However, designing them for highly specific requirements often relies on an expensive and resource-intensive trial-and-error process involving the manufacturing of physical prototypes[cite: 3].</p>
+        
+        <p style="margin: 0 0 15px 0; text-align: left;">For my Bachelor Thesis, I wanted to address this industry gap by exploring a digital modeling approach[cite: 3]. I designed and analyzed a preliminary hydraulic brake model using the open-source CFD software OpenFOAM[cite: 3]. To streamline the workflow, I used Gmsh to automate the geometry and mesh generation tasks, allowing me to easily evaluate five different geometric configurations across eleven equally spaced braking scenarios[cite: 3].</p>
+        
+        <p style="margin: 0 0 15px 0; text-align: left;">I ran two-dimensional, turbulent, and steady-state simulations to evaluate the pressure and viscous forces exerted by the fluid on the brake's internal walls[cite: 3]. Once the fluid dynamics data was extracted, I integrated the OpenFOAM results into an analytical model to simulate the braking profiles—evaluating velocity, acceleration, and temperature evolution—for different punctual masses ranging from 1 kg to 1000 kg[cite: 3].</p>
+        
+        <p style="margin: 0; text-align: left;">The findings revealed that the preliminary model overestimated performance for lighter masses, causing massive and potentially damaging decelerations, while underestimating it for heavy ones[cite: 3]. Ultimately, the most appropriate balance between braking effectiveness and resource utilization was found for an intermediate mass of around 10 kg[cite: 3]. Beyond the numerical data, the most valuable outcome of this project was developing a complete, automated analysis pipeline that can be easily extrapolated to more complex and realistic braking systems in the future[cite: 3].</p>
+    </div>
+    
+    <!-- Columna derecha con las dos imágenes rectangulares apiladas -->
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0;">
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center; width: 100%;">
+            <img src="images/case0U.png" alt="Velocity contour for case 0" style="width: 420px; height: auto; display: block;">
+        </div>
+        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center; width: 100%;">
+            <img src="images/detail.png" alt="Gmsh mesh detail" style="width: 420px; height: auto; display: block;">
+        </div>
+    </div>
+</div>
 
                 <!-- Proyecto 3: Instituto -->
                 <div class="about-container" id="project-hs" style="max-width: 1350px; gap: 70px;">
