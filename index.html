@@ -403,14 +403,15 @@
                         <p style="margin: 0 0 15px 0; text-align: left;">Things I have done with these tools.</p>
                         <p style="margin: 0; text-align: left;">Detailed breakdown of practical engineering workflows, computational routines, and simulation setups applied throughout my academic and professional trajectory.</p>
                     </div>
-                    <div class="about-imagen-container">
-                        <img src="images/proyecto1.jpg" alt="Tool Application" class="foto-about-3-4">
+                    <!-- Columna derecha vacía (Mantiene la estructura) -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0; width: 360px;">
                     </div>
                 </div>
                 
                 <!-- Proyecto 2: TFG -->
-                <div class="about-container" id="project-tfg" style="max-width: 1350px; gap: 70px;">
-                    <div class="about-texto">
+                <!-- Estructura de bloque único vertical para dar más ancho al texto y centrar imágenes -->
+                <div class="about-container" id="project-tfg" style="max-width: 1350px; display: flex; flex-direction: column; gap: 30px;">
+                    <div class="about-texto" style="width: 100%;">
                         <span style="font-size: 0.85rem; color: #64748b; font-weight: 500; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">2025</span>
                         <h3 style="color: #1e3c72; font-size: 1.5rem; margin: 15px 0 5px 0;">Design and Optimisation of a Hydraulic Brake</h3>
                         <h4 style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 1rem; color: #0d1225; margin-bottom: 15px;">Bachelor Thesis (TFG)</h4>
@@ -419,23 +420,35 @@
                         
                         <p style="margin: 0 0 15px 0; text-align: left;"> I designed and analyzed a preliminary hydraulic brake model, using Gmsh for the geometry and mesh generation and the open-source CFD software OpenFOAM for the simulations. Gmsh tasks were automated to study different geometrical configurations and mesh refinements. A mesh convergence study was performed in order to determine the most appropiate mesh giving representtive results without added computational costs. </p>
                         
+                        <!-- Bloque de imágenes incrustado entre el texto (Malla y Video) -->
+                        <div style="display: flex; justify-content: space-between; gap: 20px; margin: 25px 0;">
+                            <!-- Imagen Malla (detail) -->
+                            <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center;">
+                                <img src="images/detail.png" alt="Gmsh mesh detail" style="width: 100%; height: auto; object-fit: cover; display: block;">
+                            </div>
+                            <!-- Video Malla Animada -->
+                            <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center;">
+                                <video width="100%" autoplay loop muted playsinline style="display: block; object-fit: cover;">
+                                    <source src="images/malla_animada.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
                         <p style="margin: 0 0 15px 0; text-align: left;"> In order to also reduce the computational cost of the simulation, those regions with a smaller impact on the result has a coarser mesh. This required to also work with the copatibility of mesh elements between regions and to evaluate mesh quality metrics such as the aspect ratio, non-orthogonality or skewness. </p>
                         
                         <p style="margin: 0 0 15px 0; text-align: left;"> Since previous studies showed that the transient part of the process could be neglected, simulations were run using the SipleFoam solver. SimpleFoam is a steady-state solver for incompressible and turbulent flow that uses the SIMPLE (Semi-Implicit Method for Pressure Linked Equations) algorithm. Pressure and viscous forces exerted by the fluid on the brake's internal walls were extracted and inttegrated into an analytical model to simulate the braking profiles for different punctual masses, ranging from 1 kg to 1000 kg.</p>
+
+                        <!-- Imagen Contorno de Velocidad (case0U) más pequeña y centrada -->
+                        <div style="display: flex; justify-content: center; margin: 25px 0;">
+                            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); width: 60%; /* Ajusta este porcentaje para controlar el tamaño */ ">
+                                <img src="images/case0U.png" alt="Velocity contour for case 0" style="width: 100%; height: auto; display: block;">
+                            </div>
+                        </div>
                         
                         <p style="margin: 0 0 15px 0; text-align: left;"> Findings revealed that the model overestimated performance for lighter masses, causing large and potentially damaging decelerations, while underestimated it for heavy ones. The most appropriate balance between braking effectiveness and resource utilization was found for intermediate masses. </p>
 
                         <p style="margin: 0 0 15px 0; text-align: left;"> This project was a very valuable experience to learn more about OpenFoam and its application to a project different from the pre-defined tutorials. </p>
-                    </div>
-                    
-                    <!-- Columna derecha con las dos imágenes rectangulares apiladas -->
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0;">
-                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center; width: 100%;">
-                            <img src="images/case0U.png" alt="Velocity contour for case 0" style="width: 420px; height: auto; display: block;">
-                        </div>
-                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center; width: 100%;">
-                            <img src="images/detail.png" alt="Gmsh mesh detail" style="width: 420px; height: auto; display: block;">
-                        </div>
                     </div>
                 </div>
 
@@ -460,7 +473,8 @@
                         
                     </div>
                     <!-- Columna derecha con portada encajada arriba y rectangular ampliada abajo -->
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0;">
+                    <!-- NOTA: Hemos forzado el ancho del contenedor a 360px para que el texto de la izquierda alinee perfectamente -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0; width: 360px;">
                         
                         <!-- Imagen 1: Portada (con sombra encajada a sus proporciones auto) -->
                         <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
@@ -468,8 +482,8 @@
                         </div>
                         
                         <!-- Imagen 2: Contaminantes -->
-                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
-                            <img src="images/contaminantes.png" alt="Persistent Organic Pollutants Structure" style="width: 360px; height: 200px; object-fit: cover; display: block;">
+                        <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); width: 100%;">
+                            <img src="images/contaminantes.png" alt="Persistent Organic Pollutants Structure" style="width: 100%; height: 200px; object-fit: cover; display: block;">
                         </div>
 
                     </div>
