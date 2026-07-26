@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ángela Serranos Valencia - My Portfolio</title>
+    <title>Ángela Serranos Valencia - Portfolio</title>
 
     <link rel="icon" type="image/x-icon" href="images/logo.avif">
 
@@ -271,7 +271,7 @@
                         </div>
                         <div class="exp-company">Case Western Reserve University</div>
                         <p>Weekly evaluation of students’ work in the subject “Introduction to Circuits and Instrumentation : ENGR 210”.</p>
-                        <p style="margin-bottom: 5px;">In the United States, students that have passed a certain subject with honors are given the opprotunity to work as a Teacher Assistant (TA) 
+                        <p style="margin-bottom: 8px;">In the United States, students that have passed a certain subject with honors are given the opprotunity to work as a Teacher Assistant (TA) 
                         for that same subject in the next semmester. I was in charge of weekly evaluation the students' assignments and quizzes for the subject. At the same time, I also held office hours to solve doubts.    </p>
                         
                     </div>
@@ -415,13 +415,17 @@
                         <h3 style="color: #1e3c72; font-size: 1.5rem; margin: 15px 0 5px 0;">Design and Optimisation of a Hydraulic Brake</h3>
                         <h4 style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 1rem; color: #0d1225; margin-bottom: 15px;">Bachelor Thesis (TFG)</h4>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;">In the aerospace and heavy machinery industries, hydraulic brakes are essential due to their ability to transmit very high forces and their quick responsiveness. In this project, I wanted to tackle the fact limitation of hydraulic brakes strongly relying on trial-and-error design processes, involving the manufacturing of physical prototypes, by using CFD analysis and a digital modelling approach. </p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> In the aerospace and heavy machinery industries, hydraulic brakes are essential due to their ability to transmit very high forces and their quick responsiveness. In this project, I wanted to tackle the limitation of hydraulic brakes strongly relying on trial-and-error design processes, involving the manufacturing of physical prototypes, by using CFD analysis and a digital modelling approach. </p>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;"> I designed and analyzed a preliminary hydraulic brake model, using Gmsh for the geometry and mesh generation and the open-source CFD software OpenFOAM for the simulations. Par To streamline the workflow, I used Gmsh to automate the geometry and mesh generation tasks, allowing me to easily evaluate five different geometric configurations across eleven equally spaced braking scenarios[cite: 3].</p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> I designed and analyzed a preliminary hydraulic brake model, using Gmsh for the geometry and mesh generation and the open-source CFD software OpenFOAM for the simulations. Gmsh tasks were automated to study different geometrical configurations and mesh refinements. A mesh convergence study was performed in order to determine the most appropiate mesh giving representtive results without added computational costs. </p>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;">I ran two-dimensional, turbulent, and steady-state simulations to evaluate the pressure and viscous forces exerted by the fluid on the brake's internal walls[cite: 3]. Once the fluid dynamics data was extracted, I integrated the OpenFOAM results into an analytical model to simulate the braking profiles—evaluating velocity, acceleration, and temperature evolution—for different punctual masses ranging from 1 kg to 1000 kg[cite: 3].</p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> In order to also reduce the computational cost of the simulation, those regions with a smaller impact on the result has a coarser mesh. This required to also work with the copatibility of mesh elements between regions and to evaluate mesh quality metrics such as the aspect ratio, non-orthogonality or skewness. </p>
                         
-                        <p style="margin: 0; text-align: left;">The findings revealed that the preliminary model overestimated performance for lighter masses, causing massive and potentially damaging decelerations, while underestimating it for heavy ones[cite: 3]. Ultimately, the most appropriate balance between braking effectiveness and resource utilization was found for an intermediate mass of around 10 kg[cite: 3]. Beyond the numerical data, the most valuable outcome of this project was developing a complete, automated analysis pipeline that can be easily extrapolated to more complex and realistic braking systems in the future[cite: 3].</p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> Since previous studies showed that the transient part of the process could be neglected, simulations were run using the SipleFoam solver. SimpleFoam is a steady-state solver for incompressible and turbulent flow that uses the SIMPLE (Semi-Implicit Method for Pressure Linked Equations) algorithm. Pressure and viscous forces exerted by the fluid on the brake's internal walls were extracted and inttegrated into an analytical model to simulate the braking profiles for different punctual masses, ranging from 1 kg to 1000 kg.</p>
+                        
+                        <p style="margin: 0 0 15px 0; text-align: left;"> Findings revealed that the model overestimated performance for lighter masses, causing large and potentially damaging decelerations, while underestimated it for heavy ones. The most appropriate balance between braking effectiveness and resource utilization was found for intermediate masses. </p>
+
+                        <p style="margin: 0 0 15px 0; text-align: left;"> This project was a very valuable experience to learn more about OpenFoam and its application to a project different from the pre-defined tutorials. </p>
                     </div>
                     
                     <!-- Columna derecha con las dos imágenes rectangulares apiladas -->
@@ -480,8 +484,8 @@
         // 1. EL TEXTO DINÁMICO
         var typed = new Typed('#texto-dinamico', {
             strings: [
-                'Welcome to my personal portfolio!', 
-                'I am an Aerospace Engineer'
+                '', 
+                ''
             ],
             typeSpeed: 60,
             backSpeed: 40,
