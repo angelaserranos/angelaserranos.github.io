@@ -421,12 +421,19 @@
                     <div class="about-texto" style="width: 100%;">
                         <span style="font-size: 0.85rem; color: #64748b; font-weight: 500; background: #f1f5f9; padding: 4px 10px; border-radius: 6px;">2025</span>
                         <h3 style="color: #1e3c72; font-size: 1.5rem; margin: 15px 0 5px 0;">Design and Optimisation of a Hydraulic Brake</h3>
-                        <h4 style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 1rem; color: #0d1225; margin-bottom: 15px;">Bachelor Thesis (TFG)</h4>
+                        
+                        <!-- Subtítulo igualado a "Technical Applications" -->
+                        <h4 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.2rem; color: #0d1225; margin-bottom: 15px;">Bachelor Thesis (TFG)</h4>
                         
                         <p style="margin: 0 0 15px 0; text-align: left;"> In the aerospace and heavy machinery industries, hydraulic brakes are essential due to their ability to transmit very high forces and their quick responsiveness. In this project, I wanted to tackle the limitation of hydraulic brakes strongly relying on trial-and-error design processes, involving the manufacturing of physical prototypes, by using CFD analysis and a digital modelling approach. </p>
                         
+                        <!-- Título intermedio 1 -->
+                        <h5 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1e3c72; margin-top: 25px; margin-bottom: 10px;">Geometry & Meshing</h5>
+
                         <p style="margin: 0 0 15px 0; text-align: left;"> I designed and analyzed a preliminary hydraulic brake model, using Gmsh for the geometry and mesh generation and the open-source CFD software OpenFOAM for the simulations. Gmsh tasks were automated to study different geometrical configurations and mesh refinements. A mesh convergence study was performed in order to determine the most appropiate mesh giving representtive results without added computational costs. </p>
                         
+                        <p style="margin: 0 0 15px 0; text-align: left;"> In order to also reduce the computational cost of the simulation, those regions with a smaller impact on the result had a coarser mesh. This required to also work with the compatibility of mesh elements between regions and to evaluate mesh quality metrics such as the aspect ratio, non-orthogonality or skewness. </p>
+
                         <!-- Bloque de Malla y Vídeo MÁS PEQUEÑO y CENTRADO -->
                         <div style="display: flex; justify-content: center; gap: 20px; margin: 30px auto; max-width: 800px;">
                             <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center;">
@@ -440,9 +447,12 @@
                             </div>
                         </div>
 
-                        <p style="margin: 0 0 15px 0; text-align: left;"> In order to also reduce the computational cost of the simulation, those regions with a smaller impact on the result has a coarser mesh. This required to also work with the copatibility of mesh elements between regions and to evaluate mesh quality metrics such as the aspect ratio, non-orthogonality or skewness. </p>
-                        
-                        <p style="margin: 0 0 15px 0; text-align: left;"> Since previous studies showed that the transient part of the process could be neglected, simulations were run using the SipleFoam solver. SimpleFoam is a steady-state solver for incompressible and turbulent flow that uses the SIMPLE (Semi-Implicit Method for Pressure Linked Equations) algorithm. Pressure and viscous forces exerted by the fluid on the brake's internal walls were extracted and inttegrated into an analytical model to simulate the braking profiles for different punctual masses, ranging from 1 kg to 1000 kg.</p>
+                        <!-- Título intermedio 2 -->
+                        <h5 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1e3c72; margin-top: 25px; margin-bottom: 10px;">Simulation Setup & Automation</h5>
+
+                        <p style="margin: 0 0 15px 0; text-align: left;"> Since previous studies showed that the transient part of the process could be neglected, simulations were run using the SipleFoam solver. SimpleFoam is a steady-state solver for incompressible and turbulent flow that uses the SIMPLE (Semi-Implicit Method for Pressure Linked Equations) algorithm. Pressure and viscous forces exerted by the fluid on the brake's internal walls were extracted and inttegrated into an analytical model to simulate the braking profiles for different punctual masses. The analytical model was build using MATLAB, cosidering the braking force evolution with displacement and using MATLAB's <code>ode45</code> solver with custom event functions to integrate Newton's Second Law. A numerical integration approach was also used to estimate the thermal dissipation during the braking process. </p>
+
+                        <p style="margin: 0 0 15px 0; text-align: left;"> Beyond the CFD setup, a significant part of this project involved programming and workflow automation. MATLAB was also used to dynamically compute the geometric coordinates for the different configurations and I wrote an <code>Allrun</code> executable bash script to fully automate the OpenFOAM execution pipeline.</p>
 
                         <!-- Imagen Contorno de Velocidad (case0U) MÁS PEQUEÑA y CENTRADA -->
                         <div style="display: flex; justify-content: center; margin: 30px 0;">
@@ -451,9 +461,12 @@
                             </div>
                         </div>
                         
+                        <!-- Título intermedio 3 -->
+                        <h5 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1e3c72; margin-top: 25px; margin-bottom: 10px;">Findings & Conclusions</h5>
+
                         <p style="margin: 0 0 15px 0; text-align: left;"> Findings revealed that the model overestimated performance for lighter masses, causing large and potentially damaging decelerations, while underestimated it for heavy ones. The most appropriate balance between braking effectiveness and resource utilization was found for intermediate masses. </p>
 
-                        <p style="margin: 0 0 15px 0; text-align: left;"> This project was a very valuable experience to learn more about OpenFoam and its application to a project different from the pre-defined tutorials. </p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> Beyond the numerical results themselves, this project allowed me to develop a fully automated analysis pipeline that can be extrapolated to more complex and realistic models and also to move beyond predefined OpenFoam tutorials. </p>
                     </div>
                 </div>
 
