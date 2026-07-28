@@ -421,7 +421,7 @@
                         <!-- SECCIÓN ABAQUS -->
                         <h4 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.2rem; color: #0d1225; margin-top: 25px; margin-bottom: 10px;">Abaqus - Structural Analysis</h5>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;">During my bachelor studies, I have used <strong>Abaqus</strong> to perform finite element analysis (FEA) on different structures. Pictures show a simplified design of a commercial aircraft wing box, in this project we worked with the application of different boundary conditions and distributed or punctual loads to simulate the effect of loads like lift or the engines weight, respectively.</p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> During my bachelor studies, I have used <strong>Abaqus</strong> to perform finite element analysis (FEA) on different structures. Pictures show a simplified design of a commercial aircraft wing box, in this project we worked with the application of different boundary conditions and distributed or punctual loads to simulate the effect of loads like lift or the engines weight, respectively.</p>
 
                         <p style="margin: 0 0 15px 0; text-align: left;"> This project also covered defining material properties and assigning different materials like Aluminium, Titanium or composite materials (CFRP) to each section of the structure to balance weight reduction and structural strength. Simulations were run iteratively to analyze stress distributions and maximum displacements in order to ensure structural integrity and compliance the defined requirements.</p>
                         <p style="margin: 0 0 15px 0; text-align: left;"> The following images display different stages the analysis. The first row shows the setup of the boundary conditions and the applied loads, while the bottom row compares the von Mises stress distributions for regions with different materials (Aluminium and Titanium)</p>
@@ -431,7 +431,7 @@
                             <!-- Fila 1: Cargas y Condiciones de contorno -->
                             <div style="display: flex; justify-content: center; gap: 20px;">
                                 <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
-                                    <img src="images/lift.PNG" alt="Aerodynamic lift loads" style="width: 100%; height: auto; display: block;">
+                                    <img src="images/lift_big.png" alt="Aerodynamic lift loads" style="width: 100%; height: auto; display: block;">
                                 </div>
                                 <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
                                     <img src="images/engines.PNG" alt="Engine loads and boundary conditions" style="width: 100%; height: auto; display: block;">
@@ -448,12 +448,25 @@
                             </div>
                         </div>
 
+                        <p style="margin: 0 0 15px 0; text-align: left;"> In the Master's degree I have delved into the theoretical fundamentals of structural analysis, working with the modelling and assembly of structures through simplified components like beams, membranes and plates. </p>
+
                         <!-- SECCIÓN NASTRAN & PATRAN -->
-                        <h5 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.1rem; color: #1e3c72; margin-top: 40px; margin-bottom: 10px;">NASTRAN & PATRAN: Aeroelasticity</h5>
+                        <h4 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.2rem; color: #0d1225; margin-top: 25px; margin-bottom: 10px;">NASTRAN & PATRAN: Aeroelasticity</h5>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;">In addition to static structural analysis, I used <strong>NASTRAN</strong> and <strong>PATRAN</strong> to study simplified aeroelastic models of aircraft. This involved analyzing normal modes, calculating divergence speeds, and performing flutter analysis to understand the dynamic interaction between aerodynamic, inertial, and elastic forces.</p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> For the aeroelasticity classes of the Master's degree, I have also frequently used <strong>NASTRAN</strong> to study simplified aeroelastic models of aircraft. Practical classes and assignments covered analyzing normal modes, calculating divergence speeds, and performing flutter analysis to understand the dynamic interaction between aerodynamic, inertial, and elastic forces.</p>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;">By defining the structural and aerodynamic meshes in PATRAN and running the complex eigenvalue extractions in NASTRAN, I was able to visualize mode shapes and determine the critical flutter boundaries of the evaluated models.</p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> In order to visualize dynamically the behaviour of each normal mode, I loaded the results into a PATRAN model. The video below shows the behaviour of the structure when each normal mode is triggered and makes easier to see the parts that are more affected and in which way.</p>
+
+                        <!-- Vídeo de PATRAN centrado -->
+                        <div style="display: flex; justify-content: center; margin: 30px 0;">
+                            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); width: 60%;">
+                                <video width="100%" autoplay loop muted playsinline style="display: block; object-fit: cover;">
+                                    <source src="images/Modes_PATRAN.mp4" type="video/mp4">
+                                    Your browser does not support the video.
+                                </video>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 
