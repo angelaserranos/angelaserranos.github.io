@@ -51,44 +51,131 @@
             width: 360px;
         }
 
-        /* Reglas mágicas para que en móvil todo se apile y redimensione bien */
+        /* --- DISEÑO RESPONSIVO PARA MÓVILES --- */
         @media screen and (max-width: 768px) {
             
             body, html {
                 max-width: 100vw;
-                overflow-x: hidden; /* Evita que haya scroll horizontal en el móvil */
+                overflow-x: hidden;
+                /* Esta línea es clave: evita que el móvil agrande las letras por su cuenta */
+                -webkit-text-size-adjust: 100%; 
             }
 
+            /* 1. ARREGLO DE TAMAÑOS DE LETRA (Forzando uniformidad) */
+            /* Párrafos, listas de herramientas y textos de experiencia */
+            .seccion p, 
+            .about-texto p, 
+            .exp-content p, 
+            .exp-subrole p,
+            ul li {
+                font-size: 0.95rem !important;
+                line-height: 1.5 !important;
+            }
+
+            /* Títulos principales (Projects, Experience...) */
+            .seccion h2 { 
+                font-size: 1.8rem !important; 
+            }
+            
+            /* Títulos de proyectos y TFG */
+            .about-texto h3, 
+            .exp-content h3 { 
+                font-size: 1.3rem !important; 
+            }
+            
+            /* Cabeceras azules de las herramientas (Abaqus, MATLAB...) */
+            .about-texto h4 { 
+                font-size: 1.1rem !important; 
+                padding: 6px 10px !important; /* Estrecha el banner en móvil */
+                display: block !important;
+            }
+            
+            /* Subtítulos pequeños del TFG (Geometry, Findings...) */
+            .about-texto h5 { 
+                font-size: 1.05rem !important; 
+            }
+
+            /* Textos secundarios de Educación y Experiencia */
+            .exp-company, 
+            .exp-subrole-title {
+                font-size: 0.95rem !important;
+            }
+            .exp-date {
+                font-size: 0.8rem !important;
+                padding: 3px 6px !important;
+            }
+
+            /* 2. ARREGLO DEL MENÚ SUPERIOR Y PORTADA */
+            .menu-superior {
+                padding: 8px 10px;
+                justify-content: center;
+                background-color: #0d1225 !important;
+            }
+            .menu-superior a {
+                margin: 0 4px;
+                font-size: 0.85rem;
+                padding: 4px 6px;
+            }
+            h1 { font-size: 2rem; text-align: center; padding: 0 15px; }
+            .subtitulo { font-size: 1.1rem; text-align: center; padding: 0 15px; }
+
+            /* 3. ARREGLO DE LA ESTRUCTURA Y MÁRGENES */
+            .seccion { padding: 40px 15px !important; box-sizing: border-box; }
+            #projects { padding: 40px 15px !important; }
+            
+            .about-container {
+                flex-direction: column-reverse;
+                gap: 30px;
+                text-align: center;
+            }
+            .about-texto h2, .about-subtitulo-rol, .about-texto p {
+                text-align: left; /* Mantiene la legibilidad alineada a la izquierda */
+            }
+            .about-linkedin-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+            .foto-about-3-4 {
+                width: 200px;
+                height: 266px;
+                margin: 0 auto;
+            }
+
+            /* 4. ARREGLO DE EXPERIENCIA EN MÓVIL */
+            .exp-card {
+                flex-direction: column;
+                align-items: flex-start; /* Mantiene el texto alineado a la izquierda */
+                padding: 20px !important;
+            }
+            .exp-header-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            .exp-card-nologo {
+                padding-left: 20px !important;
+            }
+
+            /* 5. ARREGLO DE MULTIMEDIA (Vídeos e imágenes encajados) */
             .responsive-flex {
-                flex-direction: column; /* Apila los elementos verticalmente */
+                flex-direction: column; 
                 align-items: center;
-                gap: 15px; /* Reduce un poco el hueco entre vídeos apilados */
+                gap: 15px; 
                 margin: 20px auto;
             }
-            .responsive-flex > div {
-                width: 100% !important; /* Forza a que ocupen todo el ancho */
-            }
-            .media-box-50, .media-box-60 {
-                width: 100% !important; /* Amplía vídeos e imágenes sueltas al 100% del contenedor */
+            .responsive-flex > div,
+            .media-box-50, 
+            .media-box-60 {
+                width: 100% !important; 
             }
             .hs-images-col {
                 width: 100% !important;
                 max-width: 100% !important;
             }
             .hs-images-col img {
-                max-width: 100% !important; /* Forza a la imagen a no salirse */
+                max-width: 100% !important; 
                 height: auto !important;
             }
-            
-            /* Ajuste de fuentes para evitar tamaños gigantes en móvil */
-            h3 { font-size: 1.5rem !important; }
-            h4 { font-size: 1.2rem !important; }
-            h5 { font-size: 1.1rem !important; }
-            .about-texto p, ul li { font-size: 1rem !important; }
-            
-            /* Evita que los div se salgan de la pantalla por culpa del padding */
-            .seccion { padding: 40px 20px !important; box-sizing: border-box; }
-            #projects { padding: 40px 15px !important; }
         }
     </style>
 </head>
