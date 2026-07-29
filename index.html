@@ -13,10 +13,64 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <!-- Sobrescribimos el límite de 800px del CSS original para que los textos ocupen todo su espacio -->
+    <!-- Estilos adicionales y diseño responsivo para móviles -->
     <style>
         #projects .about-texto p {
             max-width: none !important;
+        }
+
+        /* Clases para manejar contenido multimedia en horizontal en PC */
+        .responsive-flex {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px auto;
+            max-width: 1000px;
+        }
+
+        .media-box-50 {
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+            width: 50%;
+        }
+
+        .media-box-60 {
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+            width: 60%;
+        }
+
+        .hs-images-col {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 20px; 
+            flex-shrink: 0; 
+            width: 360px;
+        }
+
+        /* Reglas mágicas para que en móvil todo se apile y redimensione bien */
+        @media screen and (max-width: 768px) {
+            .responsive-flex {
+                flex-direction: column; /* Apila los elementos verticalmente */
+                align-items: center;
+            }
+            .responsive-flex > div {
+                width: 100% !important; /* Forza a que ocupen todo el ancho */
+            }
+            .media-box-50, .media-box-60 {
+                width: 100% !important; /* Amplía vídeos e imágenes sueltas */
+            }
+            .hs-images-col {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .hs-images-col img {
+                width: 100% !important;
+                height: auto !important;
+            }
         }
     </style>
 </head>
@@ -281,7 +335,7 @@
                     </div>
                     <div class="exp-content">
                         <div class="exp-header-row">
-                            <h3><a href="https://case.edu/" target="_blank" style="color: #1e3c72; text-decoration: underline;">Case Western Reserve University</a></h3>
+                            <h3>Case Western Reserve University <a href="https://case.edu/" target="_blank" style="font-size: 0.9rem; font-weight: 500; color: #1e3c72; text-decoration: underline; margin-left: 8px;">(University website)</a></h3>
                             <span class="exp-date">2023 - 2024</span>
                         </div>
                         <div class="exp-company">Non-European Mobility in the United States</div>
@@ -423,30 +477,26 @@
                         
                         <p style="margin: 0 0 15px 0; text-align: left;"> During my bachelor studies, I have used <strong>Abaqus</strong> to perform finite element analysis (FEA) on different structures. Pictures show a simplified design of a commercial aircraft wing box, in this project we worked with the application of different boundary conditions and distributed or punctual loads to simulate the effect of loads like lift or the engines weight, respectively.</p>
 
-                        <div style="display: flex; flex-direction: column; gap: 20px; margin: 30px auto; max-width: 1000px;">
+                        <div class="responsive-flex">
                             <!-- Fila 1: Cargas y Condiciones de contorno -->
-                            <div style="display: flex; justify-content: center; gap: 20px;">
-                                <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
-                                    <img src="images/lift_big.png" alt="Aerodynamic lift loads" style="width: 100%; height: auto; display: block;">
-                                </div>
-                                <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
-                                    <img src="images/engines.PNG" alt="Engine loads and boundary conditions" style="width: 100%; height: auto; display: block;">
-                                </div>
+                            <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
+                                <img src="images/lift_big.png" alt="Aerodynamic lift loads" style="width: 100%; height: auto; display: block;">
+                            </div>
+                            <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
+                                <img src="images/engines.PNG" alt="Engine loads and boundary conditions" style="width: 100%; height: auto; display: block;">
                             </div>
                         </div>
                         
                         <p style="margin: 0 0 15px 0; text-align: left;"> This project also covered defining material properties and assigning different materials like Aluminium, Titanium or composite materials (CFRP) to each section of the structure to balance weight reduction and structural strength. Simulations were run iteratively to analyze stress distributions and maximum displacements in order to ensure structural integrity and compliance with the defined requirements.</p>
                         <p style="margin: 0 0 15px 0; text-align: left;"> The figures below show the obtained von Mises stress distributions for regions with different materials (Aluminium and Titanium).</p>
 
-                        <div style="display: flex; flex-direction: column; gap: 20px; margin: 30px auto; max-width: 1000px;">
+                        <div class="responsive-flex">
                             <!-- Fila 2: Resultados Von Mises (Aluminio vs Titanio) -->
-                            <div style="display: flex; justify-content: center; gap: 20px;">
-                                <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
-                                    <img src="images/VM_Aluminium.PNG" alt="Von Mises Stress - Aluminium" style="width: 100%; height: auto; display: block;">
-                                </div>
-                                <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
-                                    <img src="images/VM_Titanium.PNG" alt="Von Mises Stress - Titanium" style="width: 100%; height: auto; display: block;">
-                                </div>
+                            <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
+                                <img src="images/VM_Aluminium.PNG" alt="Von Mises Stress - Aluminium" style="width: 100%; height: auto; display: block;">
+                            </div>
+                            <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
+                                <img src="images/VM_Titanium.PNG" alt="Von Mises Stress - Titanium" style="width: 100%; height: auto; display: block;">
                             </div>
                         </div>
                         
@@ -461,7 +511,7 @@
 
                         <!-- Vídeo de PATRAN centrado -->
                         <div style="display: flex; justify-content: center; margin: 30px 0;">
-                            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); width: 60%;">
+                            <div class="media-box-60">
                                 <video width="100%" autoplay loop muted playsinline style="display: block; object-fit: cover;">
                                     <source src="images/modes.mp4" type="video/mp4">
                                     Your browser does not support the video.
@@ -488,12 +538,14 @@
                         <!-- SECCIÓN OPENFOAM -->
                         <h4 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1.15rem; color: #1e3c72; background-color: #f1f5f9; padding: 6px 15px; border-left: 4px solid #1e3c72; border-radius: 4px; margin-top: 30px; margin-bottom: 15px; display: inline-block;">OpenFOAM & ParaView - Computational Fluid Dynamics</h4>
                         
-                        <p style="margin: 0 0 15px 0; text-align: left;"> After my year abroad, I started to learn on a self-taught basis about OpenFoam and how to use it. I wanted to learn more about this tool to deepen my knowledge about CFD and take advantage of the fact that open-source tools allow to modify the code and there is a wide variety of projects that can be done with it. </p>
+                        <p style="margin: 0 0 15px 0; text-align: left;"> After my year abroad, I started to learn on a self-taught basis about OpenFOAM and how to use it. I wanted to learn more about this tool to deepen my knowledge about CFD and take advantage of the fact that open-source tools allow to modify the code and there is a wide variety of projects that can be done with it. </p>
 
                         <p style="margin: 0 0 15px 0; text-align: left;"> I practiced by working with the different tutorials and learning about the structure and contents of the different files and decided to look for a TFG project where I could work with a new scenario.</p>
 
+                        <p style="margin: 0 0 15px 0; text-align: left;"> The videos below illustrate a transient multiphase simulation (similar to a dam break scenario), where the air-water interface is tracked over time. The post-processing was done in <strong>ParaView</strong>, allowing for the visualization of the water volume fraction (<code>alpha.water</code>) alongside the velocity vector field.</p>
+
                         <!-- Contenedor de dos vídeos para OpenFOAM -->
-                        <div style="display: flex; justify-content: center; gap: 20px; margin: 30px auto; max-width: 1000px;">
+                        <div class="responsive-flex">
                             <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center; background: #fff;">
                                 <video width="100%" autoplay loop muted playsinline style="display: block; object-fit: cover;">
                                     <source src="images/damnbreak.mp4" type="video/mp4">
@@ -533,7 +585,7 @@
                         <p style="margin: 0 0 15px 0; text-align: left;"> In order to also reduce the computational cost of the simulation, those regions with a smaller impact on the result had a coarser mesh. This required to also work with the compatibility of mesh elements between regions and to evaluate mesh quality metrics such as the aspect ratio, non-orthogonality or skewness. </p>
 
                         <!-- Bloque de Malla y Vídeo MÁS PEQUEÑO y CENTRADO -->
-                        <div style="display: flex; justify-content: center; gap: 20px; margin: 30px auto; max-width: 800px;">
+                        <div class="responsive-flex" style="max-width: 800px;">
                             <div style="flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); display: flex; justify-content: center;">
                                 <img src="images/detail.png" alt="Gmsh mesh detail" style="width: 100%; height: auto; object-fit: cover; display: block;">
                             </div>
@@ -554,7 +606,7 @@
 
                         <!-- Imagen Contorno de Velocidad (case0U) MÁS PEQUEÑA y CENTRADA -->
                         <div style="display: flex; justify-content: center; margin: 30px 0;">
-                            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); width: 50%;">
+                            <div class="media-box-50">
                                 <img src="images/case0U.png" alt="Velocity contour for case 0" style="width: 100%; height: auto; display: block;">
                             </div>
                         </div>
@@ -592,11 +644,11 @@
                         
                     </div>
                     <!-- Columna derecha con portada encajada arriba y rectangular ampliada abajo -->
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; flex-shrink: 0; width: 360px;">
+                    <div class="hs-images-col">
                         
                         <!-- Imagen 1: Portada -->
                         <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);">
-                            <img src="images/Portada excelencia.jpg" alt="High School Research Project - Image 1" style="width: 260px; height: auto; display: block;">
+                            <img src="images/Portada excelencia.jpg" alt="High School Research Project - Image 1" style="max-width: 260px; width: 100%; height: auto; display: block;">
                         </div>
                         
                         <!-- Imagen 2: Contaminantes -->
