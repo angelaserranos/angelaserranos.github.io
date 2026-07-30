@@ -526,4 +526,12 @@ h1 {
     .exp-card-nologo {
         padding-left: 20px;
     }
+    /* 6. ARREGLO DEL BANNER DE CWRU EN MÓVIL */
+    .exp-banner-container {
+        max-height: none !important;
+    }
+    .exp-banner-img {
+        height: auto !important;
+        object-fit: contain !important;
+    }
 }
